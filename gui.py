@@ -5,6 +5,7 @@ import argparse
 import tkinter as tk
 from pathlib import Path
 from tkinter import filedialog, messagebox, ttk
+import sys
 
 from main import merge_mod_files
 
@@ -198,7 +199,10 @@ class ModMergerApp:
 
 def main() -> None:
     root = tk.Tk()
-    root.iconbitmap(str(Path(__file__).parent / "icon.ico"))
+    if getattr(sys, 'frozen', False) and hasattr(sys, '_MEIPASS'):
+        root.iconbitmap(str(Path(sys._MEIPASS) / "icon.ico"))
+    else:
+        root.iconbitmap(str(Path(__file__).parent / "icon.ico"))
     ModMergerApp(root)
     root.mainloop()
 
