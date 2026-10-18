@@ -3,12 +3,11 @@
 Merge Craftworld Toolkit .mod files into one .mod file
 
 # Usage
-if you have python installed on windows, just click the green CODE button, download as zip, extract into its own folder and double click gui.py, it should just work
+if you are on windows, download the exe in the releases tab and double click that<br><br>
 otherwise cd to the folder and run the command
 ```
-python gui.py
+python3 gui.py
 ```
-or `python3` if on linux
 
 # if gui.py no work or you prefer cli
 cli (`main.py`) usage
